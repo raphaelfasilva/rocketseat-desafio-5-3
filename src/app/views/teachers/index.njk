@@ -4,8 +4,18 @@
 {% endblock %}
 {% block content %}
     <div class="card table-container">
-        <p class="titulo-listagem">Professores</p>
-        <a class="botao-novo" href="/teachers/create">Novo</a>
+        <div class="header">
+            <a class="botao-novo" href="/teachers/create">Novo</a>
+            <form action="/teachers" method="get">
+            <input 
+            type="text"
+            name="filter"
+            placeholder"Filtrar por nome"
+            value="{{filter}}"
+            >
+            <button type="submit">filtrar</button>
+            </form>
+        </div>
         <table width="100%">
             <thead>
                 <tr>
